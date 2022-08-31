@@ -8,7 +8,7 @@
   "license": "MIT",
   "keywords": ["tiktok", "tiktok-signer", "jsdom"],
   "scripts": {
-    "start": "node api/index.js",
+    "start": "LD_PRELOAD='/opt/app-root/src/node_modules/sharp/vendor/lib/libz.so' node api/index.js",
     "vercel-build": "yum -y install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/"
   },
   "dependencies": {
